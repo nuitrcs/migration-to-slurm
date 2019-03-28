@@ -1,6 +1,4 @@
-# Migration to Slurm Training
-
-# Migration to Slurm Training
+# Migration to Slurm
 
 Quest will be moving from Moab to the Slurm scheduler on May 1, 2019. After this date, Moab will be unavailable. All job submission scripts that currently run on Quest must be modified to run on the new Slurm scheduler by May 1st. A test Slurm cluster is now available for you to update and test your scripts, and will be available until April 30, 2019.
 
