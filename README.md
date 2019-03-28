@@ -7,7 +7,7 @@ Please keep in mind that this test cluster is intended to test your scripts and 
 To update your submission scripts to Slurm and use the test cluster:
 1. [Modify your submission script](https://kb.northwestern.edu/89454), replacing #MSUB directives with #SBATCH directives.
 2. Specify memory usage. If you don't know how much memory your job requires, [follow the directions here](https://kb.northwestern.edu/81074) to determine the memory required for your job.
-3. Log in to the Slurm test cluster, using `ssh slurmtest.northwestern.edu`.
+3. Log in to the Slurm test cluster, using `ssh <your_netID>@slurmtest.northwestern.edu`.
 4. Submit your job to the Slurm test cluster using [sbatch or srun](https://kb.northwestern.edu/69247#slurm).
 5. Monitor your jobs to make sure they complete successfully.
 6. Submit questions and issues to quest-help@northwestern.edu.
