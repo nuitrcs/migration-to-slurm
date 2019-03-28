@@ -1,30 +1,22 @@
 # Migration to Slurm Training
 
-## Items to download for the workshop    
-[Cyberduck](https://cyberduck.io/), a friendly ftp client for transferring files to/from Quest.  Quest specific [Instructions](https://kb.northwestern.edu/quest-filetransfer) for Cyberduck can be found in the SFTP section of the transferring files page.  
-  
-[intro.tar](https://github.com/nuitrcs/intro_quest_workshop/raw/master/intro.tar) contains a sample submission script and a short python program used in the workshop.  We will use Cyberduck to move intro.tar from your local computer onto Quest. 
-  
- **PC users**: If you haven't already done so download either [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)(preferred) or [FastX](https://www.starnet.com/fastx/current-client) for logging into Quest.  Information about when to use which is available on the [knowledge base](https://kb.northwestern.edu/quest-login).  A quick-start [guide](https://kb.northwestern.edu///internal/page.php?id=69237#config2) for running FastX for the first time.  
- 
- **Mac users**: You can use the Terminal app that comes installed on your local machines, or you can download [FastX](https://www.starnet.com/fastx/current-client) for logging into Quest.  Information about when to use which is available on the [knowledge base](https://kb.northwestern.edu/quest-login).  A quick-start [guide](https://kb.northwestern.edu///internal/page.php?id=69237#config2) for running FastX for the first time.  
+# Migration to Slurm Training
 
-  
-## References
-Northwestern's [Knowledge Base](https://kb.northwestern.edu/) has all of the how-to guides for getting started on Quest  
-Suggestions for topics in the Knowledge Base: [Quest begin](https://kb.northwestern.edu/search.php?q=quest+begin&cat=0&aud=0), [Quest jobs](https://kb.northwestern.edu/search.php?q=quest+jobs&cat=0&aud=0), [Quest file transfer](https://kb.northwestern.edu/search.php?q=Quest+file+transfer&cat=0&aud=0), [Quest software](https://kb.northwestern.edu/page.php?id=70714)
+Quest will be moving from Moab to the Slurm scheduler on May 1, 2019. After this date, Moab will be unavailable. All job submission scripts that currently run on Quest must be modified to run on the new Slurm scheduler by May 1st. A test Slurm cluster is now available for you to update and test your scripts, and will be available until April 30, 2019.
 
-[Submitting a job](https://kb.northwestern.edu/page.php?id=69247) on Quest  
-[Example jobs](https://kb.northwestern.edu/page.php?id=70719) on Quest   
-  
-Types of [allocations](http://www.it.northwestern.edu/research/user-services/quest/allocation-guidelines.html) and where to [apply](http://www.it.northwestern.edu/secure/forms/research/allocation-request.html) for them  
+Please keep in mind that this test cluster is intended to test your scripts and is not intended for regular job submission. For your regular work, please continue to use the normal login credentials and your Moab workflow until May 1, 2019.
 
-Quest has high-memory [Analytics Nodes](http://www.it.northwestern.edu/research/user-services/quest/analytic-nodes.html) for running R and SAS, available to anyone with an account on Quest  
+To update your submission scripts to Slurm and use the test cluster:
+1. [Modify your submission script](https://kb.northwestern.edu/89454), replacing #MSUB directives with #SBATCH directives.
+2. Specify memory usage. If you don't know how much memory your job requires, [follow the directions here](https://kb.northwestern.edu/81074) to determine the memory required for your job.
+3. Log in to the Slurm test cluster, using `ssh slurmtest.northwestern.edu`.
+4. Submit your job to the Slurm test cluster using [sbatch or srun](https://kb.northwestern.edu/69247#slurm).
+5. Monitor your jobs to make sure they complete successfully.
+6. Submit questions and issues to quest-help@northwestern.edu.
 
-[Research Data Storage Service](http://www.it.northwestern.edu/research/user-services/storage/research-data.html) for backing up large research projects
+## Additional Resources
+[Project information and timeline](https://www.it.northwestern.edu/about/it-projects/quest-scheduler/index.html)
 
-[Training and Workshops](http://www.it.northwestern.edu/research/campus-events/index.html) available through Research Computing
+[Quick start instructions for using Slurm](https://kb.northwestern.edu/quest-slurm-quick-start)
 
-Learn about [DataCamp](http://www.it.northwestern.edu/research/campus-events/data-camp.html), providing on-line classes in R, Python and Data Science
-
-Information on [Research Computing](http://www.it.northwestern.edu/research/) and how we can help with your computational research needs 
+[Information about the test cluster and training opportunities](https://www.it.northwestern.edu/about/it-projects/quest-scheduler/test-cluster.html)
