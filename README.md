@@ -13,6 +13,8 @@ To update your submission scripts to Slurm and use the test cluster:
 6. Submit questions and issues to quest-help@northwestern.edu.
 
 ## Additional Resources
+[Screencast: Modifying Moab Scripts for Slurm](https://www.youtube.com/watch?v=QPWc1JOaBCo&feature=youtu.be)
+
 [Project information and timeline](https://www.it.northwestern.edu/about/it-projects/quest-scheduler/index.html)
 
 [Quick start instructions for using Slurm](https://kb.northwestern.edu/quest-slurm-quick-start)
